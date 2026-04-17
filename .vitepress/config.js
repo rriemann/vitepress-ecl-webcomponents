@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // import vue from '@vitejs/plugin-vue' // (already in vue: https://github.com/vuejs/vitepress/issues/3986#issuecomment-2190469437)
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import path from 'path';
+import { resolve } from 'node:path'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,9 +14,10 @@ export default defineConfig({
     ],
     resolve: {
       alias: {
-        '/build': path.join(__dirname, '../node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build'),
+        // this folder is copied together with the script of npm run docs:build
+        '/build': resolve(__dirname, '../node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build'),
       },
-      extensions: ['.ts', '.js', '.vue', '.json'],
+      // extensions: ['.ts', '.js', '.vue', '.json'], // https://vite.dev/config/shared-options#resolve-extensions
     },
   },
   head: [

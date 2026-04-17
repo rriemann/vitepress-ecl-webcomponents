@@ -10,7 +10,7 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "vitepress build && cp -r node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build .vitepress/dist",
     "docs:preview": "vitepress preview"
   }
 }
