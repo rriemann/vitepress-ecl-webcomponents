@@ -1,6 +1,6 @@
 // https://vitepress.dev/guide/custom-theme
 import Layout from './Layout.vue'
-import './style.css'
+import './style.scss'
 
 import { ComponentLibrary } from '@ecl/ecl-webcomponents-vue'
 

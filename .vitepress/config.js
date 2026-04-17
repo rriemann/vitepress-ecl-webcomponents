@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-
 // import vue from '@vitejs/plugin-vue' // (already in vue: https://github.com/vuejs/vitepress/issues/3986#issuecomment-2190469437)
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import path from 'path';
@@ -13,12 +12,12 @@ export default defineConfig({
     plugins: [
       vueJsx(),
     ],
-    // resolve: {
-    //   alias: {
-    //     '@': path.join(__dirname, '../'),
-    //   },
-    //   extensions: ['.ts', '.js', '.vue', '.json'],
-    // },
+    resolve: {
+      alias: {
+        '/build': path.join(__dirname, '../node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build'),
+      },
+      extensions: ['.ts', '.js', '.vue', '.json'],
+    },
   },
   head: [
     [

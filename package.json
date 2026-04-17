@@ -3,8 +3,9 @@
   "devDependencies": {
     "vitepress": "^2.0.0-alpha.17",
     "@stencil/vue-output-target": "^0.13.1",
-    "@vitejs/plugin-vue": "^6.0.4",
     "@vitejs/plugin-vue-jsx": "^5.1.4",
+    "@ecl/preset-ec": "^5.0.0-RC2",
+    "@ecl/theme-ec": "^5.0.0-RC2",
     "@ecl/ecl-webcomponents-vue": "0.24.1"
   },
   "scripts": {
