@@ -6,11 +6,13 @@
     "@vitejs/plugin-vue-jsx": "^5.1.4",
     "@ecl/preset-ec": "^5.0.0-RC2",
     "@ecl/theme-ec": "^5.0.0-RC2",
-    "@ecl/ecl-webcomponents-vue": "0.24.1"
+    "@ecl/ecl-webcomponents": "0.24.1",
+    "@ecl/ecl-webcomponents-vue": "file:packages/ecl-webcomponents/packages/ecl-webcomponents-vue"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build && cp -r node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build .vitepress/dist",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "preinstall": "mkdir -p packages/ecl-webcomponents; cd packages/ecl-webcomponents; git init; git remote add -f origin https://github.com/rriemann/ecl-webcomponents.git; git pull --depth=1 origin fix-exports; cd packages/ecl-webcomponents-vue; npm run build"
   }
 }

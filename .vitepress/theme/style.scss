@@ -1,0 +1,14 @@
+
+
+@use "sass:map";
+@use "@ecl/theme-ec/theme.scss";
+
+@import "@ecl/preset-ec/dist/styles/optional/ecl-reset.css";
+@import "@ecl/preset-ec/dist/styles/optional/ecl-ec-default.css";
+@import "@ecl/preset-ec/dist/styles/optional/ecl-ec-utilities.css";
+
+
+html {
+  // font-family: Arial, Helvetica;
+}
+
