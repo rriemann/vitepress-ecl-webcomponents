@@ -2,6 +2,8 @@
 
 The repos demonstrates how to use ECL webcomponents (<https://github.com/ec-europa/ecl-webcomponents>) together with <https://vitepress.dev/>.
 
+In the preview some images are broken. You need to 
+
 
 ## TODO
 

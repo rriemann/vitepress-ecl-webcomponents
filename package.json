@@ -10,9 +10,9 @@
     "@ecl/ecl-webcomponents-vue": "file:packages/ecl-webcomponents/packages/ecl-webcomponents-vue"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build && cp -r node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build .vitepress/dist",
-    "docs:preview": "vitepress preview",
+    "website:dev": "cp -r node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build website/public && vitepress dev website",
+    "website:build": "vitepress build website && cp -r node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build website/.vitepress/dist",
+    "website:preview": "vitepress preview website",
     "preinstall": "mkdir -p packages/ecl-webcomponents; cd packages/ecl-webcomponents; git init; git remote add -f origin https://github.com/rriemann/ecl-webcomponents.git; git pull --depth=1 origin fix-exports; cd packages/ecl-webcomponents-vue; npm run build"
   }
 }

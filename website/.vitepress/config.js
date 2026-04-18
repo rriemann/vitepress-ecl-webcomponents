@@ -8,6 +8,7 @@ import { resolve } from 'node:path'
 export default defineConfig({
   title: "VitePress with ECL Webcomponents",
   description: "Feasibility Study",
+  srcDir: ".",
   srcExclude: ['**/README.md', '**/TODO.md', 'packages'],
   base: '/',
   vite: {
@@ -17,8 +18,8 @@ export default defineConfig({
     resolve: {
       alias: {
         // this folder is copied together with the script of npm run docs:build
-        '/build': resolve(__dirname, '../node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build'),
-        '@ecl/ecl-webcomponents-vue': resolve(__dirname, '../packages/ecl-webcomponents/packages/ecl-webcomponents-vue'),
+        '/build': resolve(__dirname, '../../node_modules/@ecl/ecl-webcomponents/dist/ecl-webcomponents/build'),
+        '@ecl/ecl-webcomponents-vue': resolve(__dirname, '../../packages/ecl-webcomponents/packages/ecl-webcomponents-vue'),
       },
       // extensions: ['.ts', '.js', '.vue', '.json'], // https://vite.dev/config/shared-options#resolve-extensions
     },

@@ -1,4 +1,9 @@
 node_modules/
 packages/
-.vitepress/cache/
-.vitepress/dist
+**/.vitepress/cache/
+**/.vitepress/dist
+
+
+
+# vitepress build output in public folder (will be copied from NPM for prod)
+website/public/build
